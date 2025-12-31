@@ -41,8 +41,8 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <2 2>;
-            then-layer = <3>;
+            if-layers = <3 3>;
+            then-layer = <4>;
         };
     };
 };
@@ -63,14 +63,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt LALT LANG2>, <&mo 2>, <&mo 1>;
+            bindings = <&mt LALT LANG2>, <&mo 3>, <&mo 2>;
         };
 
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt RCTL LANG1>, <&mo 2>, <&mo 1>;
+            bindings = <&mt RCTL LANG1>, <&mo 3>, <&mo 2>;
         };
 
         // Customed Hold-Tap for SandS
@@ -96,7 +96,7 @@
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&tog 1 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&tog 2 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_layer_0";
         };
 
@@ -112,7 +112,7 @@
                 <&macro_release>,
                 <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&sl 1>;
+                <&sl 2>;
 
             label = "MKP_EXIT_AML";
         };
@@ -130,8 +130,20 @@
 &kp ESC    &kp N1  &kp N2  &kp N3    &kp N4            &kp N5                      &kp KP_N7     &kp KP_N8  &kp KP_N9   &kp KP_DIVIDE                     &kp NUMBER_6  &kp N7  &kp N8     &kp N9   &kp N0    &kp GRAVE
 &kp TAB    &kp Q   &kp W   &kp E     &kp R             &kp T                       &kp KP_N4     &kp KP_N5  &kp KP_N6   &kp KP_MULTIPLY                   &kp Y         &kp U   &kp I      &kp O    &kp P     &kp MINUS
 &kp LCTRL  &kp A   &kp S   &kp D     &kp F             &kp G      &kp LG(SPACE)    &kp KP_N1     &kp KP_N2  &kp KP_N3   &kp KP_MINUS       &kp BACKSPACE  &kp H         &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C     &kp V             &kp B      &mo 3            &kp KP_ENTER  &kp KP_N0  &kp KP_DOT  &kp KP_PLUS        &none          &kp N         &kp M   &kp COMMA  &kp DOT  &kp FSLH  &mo 2
-&none      &none           &kp LALT  &kp LEFT_COMMAND  &kp SPACE  &kp SPACE                                                                &mo 1          &kp ENTER                                           &tog 4
+&kp LSHFT  &kp Z   &kp X   &kp C     &kp V             &kp B      &mo 4            &kp KP_ENTER  &kp KP_N0  &kp KP_DOT  &kp KP_PLUS        &none          &kp N         &kp M   &kp COMMA  &kp DOT  &kp FSLH  &mo 3
+&none      &none           &kp LALT  &kp LEFT_COMMAND  &kp SPACE  &kp SPACE                                                                &mo 2          &kp ENTER                                           &tog 1
+            >;
+        };
+
+        mouse_layer {
+            display-name = "Mouse";
+            sensor-bindings = <&scroll_down_up>;
+            bindings = <
+&to_layer_0 ESC         &none   &none      &none      &none      &none                              &trans  &trans  &trans  &trans                     &none           &none      &none      &none      &none         &none
+&to_layer_0 TAB         &none   &none      &none      &none      &none                              &trans  &trans  &trans  &trans                     &none           &none      &none      &none      &none         &none
+&to_layer_0 LCTRL       &none   &mkp LCLK  &mkp MCLK  &mkp RCLK  &msc SCRL_UP    &msc SCRL_LEFT     &trans  &trans  &trans  &trans    &msc SCRL_LEFT   &msc SCRL_UP    &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp LC(LEFT)  &kp LC(RIGHT)
+&to_layer_0 LEFT_SHIFT  &none   &none      &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &msc SCRL_RIGHT    &trans  &trans  &trans  &trans    &msc SCRL_RIGHT  &msc SCRL_DOWN  &mkp MB4   &mkp MB5   &none      &kp Y         &trans
+&to 0                   &trans             &trans     &trans     &trans          &trans                                               &trans           &trans                                                         &tog 0
             >;
         };
 
@@ -168,18 +180,6 @@
 &trans  &none         &none         &none         &none         &none         &none     &trans  &trans  &trans  &trans    &ind_bat  &out OUT_TOG    &none  &none  &none  &none  &none
 &trans  &none         &none         &none         &none         &none         &none     &trans  &trans  &trans  &trans    &ind_con  &studio_unlock  &none  &none  &none  &kp X  &trans
 &to 0   &kp C_MUTE                  &trans        &trans        &trans        &trans                                      &trans    &kp DEL                                     &none
-            >;
-        };
-
-        mouse_layer {
-            display-name = "Mouse";
-            sensor-bindings = <&scroll_down_up>;
-            bindings = <
-&to_layer_0 ESC         &none   &none      &none      &none      &none                              &trans  &trans  &trans  &trans                     &none           &none      &none      &none      &none         &none
-&to_layer_0 TAB         &none   &none      &none      &none      &none                              &trans  &trans  &trans  &trans                     &none           &none      &none      &none      &none         &none
-&to_layer_0 LCTRL       &none   &mkp LCLK  &mkp MCLK  &mkp RCLK  &msc SCRL_UP    &msc SCRL_LEFT     &trans  &trans  &trans  &trans    &msc SCRL_LEFT   &msc SCRL_UP    &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp LC(LEFT)  &kp LC(RIGHT)
-&to_layer_0 LEFT_SHIFT  &none   &none      &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &msc SCRL_RIGHT    &trans  &trans  &trans  &trans    &msc SCRL_RIGHT  &msc SCRL_DOWN  &mkp MB4   &mkp MB5   &none      &kp Y         &trans
-&to 0                   &trans             &trans     &trans     &trans          &trans                                               &trans           &trans                                                         &tog 0
             >;
         };
 
