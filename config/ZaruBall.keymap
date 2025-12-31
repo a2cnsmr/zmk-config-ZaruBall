@@ -96,7 +96,7 @@
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&tog 2 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&tog 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_layer_0";
         };
 
@@ -112,7 +112,7 @@
                 <&macro_release>,
                 <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&sl 2>;
+                <&sl 1>;
 
             label = "MKP_EXIT_AML";
         };
@@ -143,7 +143,7 @@
 &to_layer_0 TAB         &none   &none      &none      &none      &none                              &trans  &trans  &trans  &trans                     &none           &none      &none      &none      &none         &none
 &to_layer_0 LCTRL       &none   &mkp LCLK  &mkp MCLK  &mkp RCLK  &msc SCRL_UP    &msc SCRL_LEFT     &trans  &trans  &trans  &trans    &msc SCRL_LEFT   &msc SCRL_UP    &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp LC(LEFT)  &kp LC(RIGHT)
 &to_layer_0 LEFT_SHIFT  &none   &none      &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &msc SCRL_RIGHT    &trans  &trans  &trans  &trans    &msc SCRL_RIGHT  &msc SCRL_DOWN  &mkp MB4   &mkp MB5   &none      &kp M         &trans
-&to 0                   &trans             &trans     &trans     &trans          &trans                                               &trans           &trans                                                         &tog 0
+&to 0                   &trans             &trans     &trans     &trans          &trans                                               &trans           &trans                                                         &tog 1
             >;
         };
 
