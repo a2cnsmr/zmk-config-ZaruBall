@@ -142,7 +142,7 @@
 &trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5             &trans  &trans  &trans  &trans            &none   &none  &none      &kp MINUS         &kp EQUAL          &kp GRAVE
 &trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10            &trans  &trans  &trans  &trans            &none   &none  &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
 &trans  &kp F11  &kp F12  &none   &none   &none    &trans    &trans  &trans  &trans  &trans    &trans  &none   &none  &none      &kp SEMICOLON     &kp SEMICOLON      &kp SQT
-&trans  &none    &none    &none   &none   &none    &trans    &trans  &trans  &trans  &trans    &trans  &none   &none  &kp COMMA  &kp PERIOD        &kp SLASH          &trans
+&trans  &none    &none    &none   &none   &none    &trans    &trans  &trans  &trans  &trans    &trans  &none   &none  &kp COMMA  &kp PERIOD        &kp SLASH          &none
 &to 0   &none             &trans  &trans  &trans   &trans                                      &trans  &trans                                                         &trans
             >;
         };
@@ -154,7 +154,7 @@
 &trans  &none  &none  &none      &none      &none                              &trans  &trans  &trans  &trans            &none   &none  &none      &none     &none          &kp DEL
 &trans  &none  &none  &none      &none      &none                              &trans  &trans  &trans  &trans            &none   &none  &none      &none     &none          &none
 &trans  &none  &none  &mkp RCLK  &mkp LCLK  &msc SCRL_UP    &msc SCRL_LEFT     &trans  &trans  &trans  &trans    &none   &none   &none  &kp PG_UP  &kp UP    &kp PAGE_DOWN  &none
-&trans  &none  &none  &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &msc SCRL_RIGHT    &trans  &trans  &trans  &trans    &none   &none   &none  &kp LEFT   &kp DOWN  &kp RIGHT      &trans
+&trans  &none  &none  &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &msc SCRL_RIGHT    &trans  &trans  &trans  &trans    &none   &none   &none  &kp LEFT   &kp DOWN  &kp RIGHT      &none
 &to 0   &none         &trans     &trans     &trans          &trans                                               &trans  &trans                                             &trans
             >;
         };
@@ -178,7 +178,7 @@
 &to_layer_0 ESC         &none   &none      &none      &none      &none                              &trans  &trans  &trans  &trans                     &none           &none      &none      &none      &none         &none
 &to_layer_0 TAB         &none   &none      &none      &none      &none                              &trans  &trans  &trans  &trans                     &none           &none      &none      &none      &none         &none
 &to_layer_0 LCTRL       &none   &mkp LCLK  &mkp MCLK  &mkp RCLK  &msc SCRL_UP    &msc SCRL_LEFT     &trans  &trans  &trans  &trans    &msc SCRL_LEFT   &msc SCRL_UP    &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp LC(LEFT)  &kp LC(RIGHT)
-&to_layer_0 LEFT_SHIFT  &none   &none      &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &msc SCRL_RIGHT    &trans  &trans  &trans  &trans    &msc SCRL_RIGHT  &msc SCRL_DOWN  &mkp MB4   &mkp MB5   &none      &none         &trans
+&to_layer_0 LEFT_SHIFT  &none   &none      &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &msc SCRL_RIGHT    &trans  &trans  &trans  &trans    &msc SCRL_RIGHT  &msc SCRL_DOWN  &mkp MB4   &mkp MB5   &none      &none         &none
 &to 0                   &trans             &trans     &trans     &trans          &trans                                               &trans           &trans                                                         &tog 0
             >;
         };
