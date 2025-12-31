@@ -141,7 +141,7 @@
             bindings = <
 &trans  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5             &trans  &trans  &trans  &trans            &none   &none  &none      &kp MINUS         &kp EQUAL          &to_layer_0 GRAVE
 &trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10            &trans  &trans  &trans  &trans            &none   &none  &none      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
-&trans  &kp F11  &kp F12  &none   &none   &none    &trans    &trans  &trans  &trans  &trans    &none   &none   &none  &kp PG_UP  &kp SEMICOLON     &kp SEMICOLON      &to_layer_0 SQT
+&trans  &kp F11  &kp F12  &none   &none   &none    &trans    &trans  &trans  &trans  &trans    &trans  &none   &none  &none      &kp SEMICOLON     &kp SEMICOLON      &to_layer_0 SQT
 &trans  &none    &none    &none   &none   &none    &trans    &trans  &trans  &trans  &trans    &trans  &none   &none  &kp COMMA  &kp PERIOD        &kp SLASH          &trans
 &trans  &none             &trans  &trans  &trans   &trans                                      &trans  &trans                                                         &studio_unlock
             >;
