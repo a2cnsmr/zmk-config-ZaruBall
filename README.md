@@ -55,3 +55,11 @@ Saveボタンで参照しているリポジトリにpushでき、自動的にWor
 ZMK Studioにはアプリ版とブラウザ版が存在し、ブラウザ版にはUSB接続時のみ使用可能という制約がある。<br>
 ZMK Studio起動後、 &studio_unlock　を配置したキーを押下することでStudioで編集が可能となる。<br>
 右上の保存ボタンを推すことで、キーマップをすぐにキーボードへ反映できる。
+
+# 現在のキーマップ
+
+1. [ベースレイヤー](img/layer_0.png)
+1. [マウスレイヤー](img/layer_1.png)
+1. [Lowerレイヤー](img/layer_2.png)
+1. [Riseレイヤー](img/layer_3.png)
+1. [Adjustレイヤー](img/layer_4.png)
