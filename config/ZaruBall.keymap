@@ -17,6 +17,7 @@
 #define SCROLL   2
 
 // スクロール量の設定
+
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 &trackball_listener {
@@ -49,10 +50,12 @@
 / {
     behaviors {
         // スクロール用のbehaviorの設定
+
         scroll_down_up: behavior_sensor_rotate_mouse_wheel_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>;
         };
 
@@ -77,12 +80,13 @@
             tapping-term-ms = <500>;
             quick-tap-ms = <500>;
             bindings = <&kp>, <&kp>;
+
             display-name = "SandS";
         };
     };
 };
 
- / {
+/ {
     keymap {
         compatible = "zmk,keymap";
 
@@ -102,11 +106,11 @@
             display-name = "Mouse";
             sensor-bindings = <&scroll_down_up>;
             bindings = <
-&kp ESC          &none   &none      &none      &none      &none                              &trans  &trans  &trans  &trans                     &none           &none      &none      &none      &none         &none
-&kp TAB          &none   &none      &none      &none      &none                              &trans  &trans  &trans  &trans                     &none           &none      &none      &none      &none         &none
-&kp LCTRL        &none   &mkp LCLK  &mkp MCLK  &mkp RCLK  &msc SCRL_UP    &msc SCRL_LEFT     &trans  &trans  &trans  &trans    &msc SCRL_LEFT   &msc SCRL_UP    &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp LC(LEFT)  &kp LC(RIGHT)
-&kp LSHFT        &none   &none      &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &msc SCRL_RIGHT    &trans  &trans  &trans  &trans    &msc SCRL_RIGHT  &msc SCRL_DOWN  &mkp MB4   &mkp MB5   &none      &kp M         &trans
-&to 0            &trans             &trans     &trans     &trans          &trans                                               &trans           &trans                                                         &tog 1
+&kp ESC    &none   &none  &none   &none   &none                              &trans  &trans  &trans  &trans                     &none           &none      &none      &none      &none         &none
+&kp TAB    &none   &none  &none   &none   &none                              &trans  &trans  &trans  &trans                     &none           &none      &none      &none      &none         &none
+&kp LCTRL  &none   &none  &none   &none   &msc SCRL_UP    &msc SCRL_LEFT     &trans  &trans  &trans  &trans    &msc SCRL_LEFT   &msc SCRL_UP    &mkp LCLK  &mkp MCLK  &mkp RCLK  &kp LC(LEFT)  &kp LC(RIGHT)
+&kp LSHFT  &none   &none  &none   &none   &msc SCRL_DOWN  &msc SCRL_RIGHT    &trans  &trans  &trans  &trans    &msc SCRL_RIGHT  &msc SCRL_DOWN  &mkp MB4   &mkp MB5   &none      &kp M         &trans
+&to 0      &trans         &trans  &trans  &trans          &trans                                               &trans           &trans                                                         &tog 1
             >;
         };
 
@@ -126,11 +130,11 @@
             display-name = "Raise";
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
             bindings = <
-&trans  &none  &none  &none      &none      &none                              &trans  &trans  &trans  &trans            &none   &none  &none      &none     &none          &kp DEL
-&trans  &none  &none  &none      &none      &none                              &trans  &trans  &trans  &trans            &none   &none  &none      &none     &none          &none
-&trans  &none  &none  &mkp RCLK  &mkp LCLK  &msc SCRL_UP    &msc SCRL_LEFT     &trans  &trans  &trans  &trans    &trans  &none   &none  &kp PG_UP  &kp UP    &kp PAGE_DOWN  &none
-&trans  &none  &none  &mkp MB4   &mkp MB5   &msc SCRL_DOWN  &msc SCRL_RIGHT    &trans  &trans  &trans  &trans    &none   &none   &none  &kp LEFT   &kp DOWN  &kp RIGHT      &trans
-&to 0   &none         &trans     &trans     &trans          &trans                                               &trans  &trans                                             &trans
+&trans  &none  &none  &none   &none   &none             &trans  &trans  &trans  &trans            &none   &none  &none      &none     &none          &kp DEL
+&trans  &none  &none  &none   &none   &none             &trans  &trans  &trans  &trans            &none   &none  &none      &none     &none          &none
+&trans  &none  &none  &none   &none   &none   &trans    &trans  &trans  &trans  &trans    &trans  &none   &none  &kp PG_UP  &kp UP    &kp PAGE_DOWN  &none
+&trans  &none  &none  &none   &none   &none   &trans    &trans  &trans  &trans  &trans    &none   &none   &none  &kp LEFT   &kp DOWN  &kp RIGHT      &trans
+&to 0   &none         &trans  &trans  &trans  &trans                                      &trans  &trans                                             &trans
             >;
         };
 
@@ -147,6 +151,7 @@
         };
 
         extra1 { status = "reserved"; };
+
         extra2 { status = "reserved"; };
     };
 };
