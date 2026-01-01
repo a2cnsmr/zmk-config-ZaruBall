@@ -130,11 +130,11 @@
             display-name = "Raise";
             sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
             bindings = <
-&trans  &none  &none  &none   &none   &none             &trans  &trans  &trans  &trans            &none   &none  &none      &none     &none          &kp DEL
-&trans  &none  &none  &none   &none   &none             &trans  &trans  &trans  &trans            &none   &none  &none      &none     &none          &none
-&trans  &none  &none  &none   &none   &none   &trans    &trans  &trans  &trans  &trans    &trans  &none   &none  &kp PG_UP  &kp UP    &kp PAGE_DOWN  &none
-&trans  &none  &none  &none   &none   &none   &trans    &trans  &trans  &trans  &trans    &none   &none   &none  &kp LEFT   &kp DOWN  &kp RIGHT      &trans
-&to 0   &none         &trans  &trans  &trans  &trans                                      &trans  &trans                                             &trans
+&trans  &kp LG(C_BRI_DN)  &kp C_BRI_UP  &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP            &trans  &trans  &trans  &trans            &none   &none  &none      &none     &none          &kp DEL
+&trans  &none             &none         &none       &none         &none                   &trans  &trans  &trans  &trans            &none   &none  &none      &none     &none          &none
+&trans  &none             &none         &none       &none         &none         &trans    &trans  &trans  &trans  &trans    &trans  &none   &none  &kp PG_UP  &kp UP    &kp PAGE_DOWN  &none
+&trans  &none             &none         &none       &none         &none         &trans    &trans  &trans  &trans  &trans    &none   &none   &none  &kp LEFT   &kp DOWN  &kp RIGHT      &trans
+&to 0   &none                           &trans      &trans        &trans        &trans                                      &trans  &trans                                             &trans
             >;
         };
 
