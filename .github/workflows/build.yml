@@ -1,4 +1,13 @@
-on: [push, pull_request, workflow_dispatch]
+on:
+  push:
+    paths-ignore:
+      - "**/*.md"
+      - "img/**"
+  pull_request:
+    paths-ignore:
+      - "**/*.md"
+      - "img/**"
+  workflow_dispatch:
 
 jobs:
   build:
