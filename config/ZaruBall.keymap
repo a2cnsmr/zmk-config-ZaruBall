@@ -156,7 +156,7 @@
 &trans  &none  &none  &none   &none   &none                    &none  &none  &none  &none            &none   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_DIVIDE  &none
 &trans  &none  &none  &none   &none   &none                    &none  &none  &none  &none            &none   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_N6        &kp ASTERISK   &none
 &trans  &none  &none  &none   &none   &none   &kp LG(SPACE)    &none  &none  &none  &none    &trans  &none   &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS   &none
-&trans  &none  &none  &none   &none   &none   &none            &none  &none  &none  &none    &tog 5  &none   &kp KP_NUMBER_0  &kp KP_COMMA     &kp KP_DOT       &kp KP_PLUS    &mo 3
+&trans  &none  &none  &none   &none   &none   &none            &none  &none  &none  &none    &tog 5  &none   &kp KP_NUMBER_0  &kp KP_COMMA     &kp KP_DOT       &kp KP_PLUS    &none
 &none   &none         &trans  &trans  &trans  &trans                                         &trans  &trans                                                                    &none
             >;
         };
