@@ -20,10 +20,7 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 &trackball_listener {
-    input-processors = <
-        &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT)
-        /* トグル運用のため、AML相当の一時レイヤー遷移は無効化 */
-    >;
+    input-processors = <&zip_xy_scaler 0 1>;
 
     scroller {
         layers = <SCROLL>;
@@ -31,6 +28,14 @@
             &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT)
             &zip_xy_scaler 1 20
             &zip_xy_to_scroll_mapper
+        >;
+    };
+
+    mouse_movement {
+        layers = <MOUSE>;
+        input-processors = <
+            &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT)
+            /* トグル運用のため、AML相当の一時レイヤー遷移は無効化 */
         >;
     };
 };
